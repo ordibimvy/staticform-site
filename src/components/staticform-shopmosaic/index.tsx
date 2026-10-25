@@ -12,9 +12,9 @@ const DEFAULTS: StaticFormShopMosaicProps = {
   noteLabel: 'NOTE / AW26',
   viewLabel: 'VIEW',
   breakA: 'AW26',
-  breakB: 'PART TWO / KNIT, SHIRTS, TROUSERS, OBJECTS',
-  breakC: 'MADE IN PORTUGAL',
-  currency: '€',
+  breakB: 'COUTURE / BESPOKE TAILORING / FORMALWEAR',
+  breakC: 'MADE IN PORTLAND, MAINE',
+  currency: '$',
   productLinkBase: '/product/',
   compactBelow: 810,
   barHeight: 64,
@@ -23,10 +23,10 @@ const DEFAULTS: StaticFormShopMosaicProps = {
   fontSerif: "'Instrument Serif', 'Times New Roman', serif",
   fontMono: "'Geist Mono', ui-monospace, monospace",
   ink: '#11110F',
-  bone: '#EDEAE2',
+  bone: '#F4EFE6',
   surface: '#1A1916',
   muted: '#858178',
-  accent: '#B93F32',
+  accent: '#B8975A',
 }
 
 export default function StaticFormShopMosaic(props: StaticFormShopMosaicProps) {

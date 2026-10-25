@@ -180,13 +180,13 @@
 
 :root {
   --token-a3482f54-0c70-45ca-ae50-d600c5840b70: rgb(17, 17, 15);
-  --token-31bf6c1c-c2e5-4905-a3a6-36d3d25ecb81: rgb(237, 234, 226);
+  --token-31bf6c1c-c2e5-4905-a3a6-36d3d25ecb81: rgb(244, 239, 230);
   --token-6491f914-f7eb-4d7a-bab8-d9eec2f1e837: rgb(26, 25, 22);
   --token-266155f1-ee22-4c4d-a7f9-14396f3b3170: rgb(133, 129, 120);
-  --token-10b3c583-e6c2-4ed5-bd70-462ebcec53e7: rgb(185, 63, 50);
-  --token-d428742b-4060-4ea2-80f7-8fa00d8f3eb3: rgba(237, 234, 226, 0.16);
-  --token-a7e28750-cc9d-4290-b719-389c667e3f15: rgba(237, 234, 226, 0.34);
-  --token-cfccb85f-83a5-4458-ac22-43b33dee2601: rgba(237, 234, 226, 0.6);
+  --token-10b3c583-e6c2-4ed5-bd70-462ebcec53e7: rgb(184, 151, 90);
+  --token-d428742b-4060-4ea2-80f7-8fa00d8f3eb3: rgba(244, 239, 230, 0.16);
+  --token-a7e28750-cc9d-4290-b719-389c667e3f15: rgba(244, 239, 230, 0.34);
+  --token-cfccb85f-83a5-4458-ac22-43b33dee2601: rgba(244, 239, 230, 0.6);
   --token-cec2517d-cab2-4e1e-94a1-a5acdca3cea8: rgba(17, 17, 15, 0.8);
   --token-f8ab56a3-8c96-42df-8745-1304d733152f: rgba(17, 17, 15, 0.6);
   --token-963a00a7-fb82-4991-8dda-c77d39a6c430: rgba(17, 17, 15, 0.55);
@@ -201,13 +201,13 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --token-a3482f54-0c70-45ca-ae50-d600c5840b70: rgb(17, 17, 15);
-    --token-31bf6c1c-c2e5-4905-a3a6-36d3d25ecb81: rgb(237, 234, 226);
+    --token-31bf6c1c-c2e5-4905-a3a6-36d3d25ecb81: rgb(244, 239, 230);
     --token-6491f914-f7eb-4d7a-bab8-d9eec2f1e837: rgb(26, 25, 22);
     --token-266155f1-ee22-4c4d-a7f9-14396f3b3170: rgb(133, 129, 120);
-    --token-10b3c583-e6c2-4ed5-bd70-462ebcec53e7: rgb(185, 63, 50);
-    --token-d428742b-4060-4ea2-80f7-8fa00d8f3eb3: rgba(237, 234, 226, 0.16);
-    --token-a7e28750-cc9d-4290-b719-389c667e3f15: rgba(237, 234, 226, 0.34);
-    --token-cfccb85f-83a5-4458-ac22-43b33dee2601: rgba(237, 234, 226, 0.6);
+    --token-10b3c583-e6c2-4ed5-bd70-462ebcec53e7: rgb(184, 151, 90);
+    --token-d428742b-4060-4ea2-80f7-8fa00d8f3eb3: rgba(244, 239, 230, 0.16);
+    --token-a7e28750-cc9d-4290-b719-389c667e3f15: rgba(244, 239, 230, 0.34);
+    --token-cfccb85f-83a5-4458-ac22-43b33dee2601: rgba(244, 239, 230, 0.6);
     --token-cec2517d-cab2-4e1e-94a1-a5acdca3cea8: rgba(17, 17, 15, 0.8);
     --token-f8ab56a3-8c96-42df-8745-1304d733152f: rgba(17, 17, 15, 0.6);
     --token-963a00a7-fb82-4991-8dda-c77d39a6c430: rgba(17, 17, 15, 0.55);
@@ -224,73 +224,73 @@
   font-family: 'Geist', sans-serif;
   font-size: 15px;
   line-height: 1.5em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-xsFHtZz0b {
   font-family: 'Geist Mono', sans-serif;
   font-size: 11px;
   line-height: 1.4em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-J07KW0OMG {
   font-family: 'Geist Mono', sans-serif;
   font-size: 12px;
   line-height: 1.4em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-GGThu5wvw {
   font-family: 'Geist', sans-serif;
   font-size: 15px;
   line-height: 1.5em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-o_TPZzoJe {
   font-family: 'Geist', sans-serif;
   font-size: 256px;
   line-height: 0.8em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-NV25Wl7AI {
   font-family: 'Instrument Serif', sans-serif;
   font-size: 30px;
   line-height: 1.12em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-mJjf53kal {
   font-family: 'Geist', sans-serif;
   font-size: 96px;
   line-height: 0.92em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-qulxcVUwb {
   font-family: 'Geist', sans-serif;
   font-size: 17px;
   line-height: 1.5em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-LV36a6Qsf {
   font-family: 'Geist', sans-serif;
   font-size: 73.6px;
   line-height: 0.94em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-Ox07MnIuG {
   font-family: 'Geist', sans-serif;
   font-size: 24px;
   line-height: 1.5em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-sfcabV6Bn {
   font-family: 'Geist', sans-serif;
   font-size: 160px;
   line-height: 0.88em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-GhXgSu4uZ {
   font-family: 'Geist', sans-serif;
   font-size: 192px;
   line-height: 0.86em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-u2rWHhY6q {
   font-family: 'Instrument Serif', sans-serif;
@@ -302,19 +302,19 @@
   font-family: 'Instrument Serif', sans-serif;
   font-size: 38px;
   line-height: 1.05em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-tvZshztIy {
   font-family: 'Geist', sans-serif;
   font-size: 144px;
   line-height: 0.9em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-d4jcS6LoD {
   font-family: 'Geist', sans-serif;
   font-size: 240px;
   line-height: 0.88em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-iSDGzosIK {
   font-family: 'Geist', sans-serif;
@@ -332,55 +332,55 @@
   font-family: 'Geist', sans-serif;
   font-size: 36px;
   line-height: 1.5em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-opHaWgkoT {
   font-family: 'Instrument Serif', sans-serif;
   font-size: 30px;
   line-height: 1.05em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-TFj373OJW {
   font-family: 'Instrument Serif', sans-serif;
   font-size: 70px;
   line-height: 1.02em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-eNw4hBNXf {
   font-family: 'Geist', sans-serif;
   font-size: 128px;
   line-height: 0.9em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-mcAA8i85i {
   font-family: 'Instrument Serif', sans-serif;
   font-size: 60px;
   line-height: 1.05em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-vnBK773i0 {
   font-family: 'Geist', sans-serif;
   font-size: 176px;
   line-height: 0.88em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-tdH9XgbFj {
   font-family: 'Instrument Serif', sans-serif;
   font-size: 34px;
   line-height: 1.15em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-KhdMfAAD9 {
   font-family: 'Geist', sans-serif;
   font-size: 192px;
   line-height: 0.88em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-XhiG8yeyc {
   font-family: 'Instrument Serif', sans-serif;
   font-size: 38px;
   line-height: 1.1em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-zGN0hDdCB {
   font-family: 'Geist', sans-serif;
@@ -392,7 +392,7 @@
   font-family: 'Instrument Serif', sans-serif;
   font-size: 64px;
   line-height: 1.1em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-iv0OKxgut {
   font-family: 'Geist Mono', sans-serif;
@@ -410,7 +410,7 @@
   font-family: 'Geist', sans-serif;
   font-size: 15px;
   line-height: 1.5em;
-  color: rgba(237, 234, 226, 0.6);
+  color: rgba(244, 239, 230, 0.6);
 }
 .text-style-aMBh_T9Nm {
   font-family: 'Geist Mono', sans-serif;
@@ -440,31 +440,31 @@
   font-family: 'Instrument Serif', sans-serif;
   font-size: 160px;
   line-height: 0.88em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-dLMJaaBm7 {
   font-family: 'Instrument Serif', sans-serif;
   font-size: 144px;
   line-height: 0.9em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-SjjkWg8PF {
   font-family: 'Instrument Serif', sans-serif;
   font-size: 128px;
   line-height: 0.9em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-qegJqmLzc {
   font-family: 'Instrument Serif', sans-serif;
   font-size: 192px;
   line-height: 0.88em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-amCUDgt1N {
   font-family: 'Instrument Serif', sans-serif;
   font-size: 192px;
   line-height: 0.86em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-qSPGeHhYW {
   font-family: 'Instrument Serif', sans-serif;
@@ -476,29 +476,29 @@
   font-family: 'Instrument Serif', sans-serif;
   font-size: 96px;
   line-height: 0.92em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-D_dcunEmw {
   font-family: 'Instrument Serif', sans-serif;
   font-size: 28px;
   line-height: 1em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-Nlt6RdS7c {
   font-family: 'Instrument Serif', sans-serif;
   font-size: 38px;
   line-height: 1.1em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-WwOkvoxC7 {
   font-family: 'Geist', sans-serif;
   font-size: 40px;
   line-height: 1.05em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }
 .text-style-Ak_ALM4dY {
   font-family: 'Geist', sans-serif;
   font-size: 20px;
   line-height: 1.3em;
-  color: rgb(237, 234, 226);
+  color: rgb(244, 239, 230);
 }

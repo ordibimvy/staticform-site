@@ -39,7 +39,7 @@ export interface StaticFormShopMosaicProps {
   breakC?: string;
   /**
    * Currency
-   * @default "€"
+   * @default "$"
    */
   currency?: string;
   /**
@@ -92,7 +92,7 @@ export interface StaticFormShopMosaicProps {
   ink?: string;
   /**
    * Bone
-   * @default "#EDEAE2"
+   * @default "#F4EFE6"
    */
   bone?: string;
   /**
@@ -107,7 +107,7 @@ export interface StaticFormShopMosaicProps {
   muted?: string;
   /**
    * Accent
-   * @default "#B93F32"
+   * @default "#B8975A"
    */
   accent?: string;
   /** Additional properties */

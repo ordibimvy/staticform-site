@@ -10,6 +10,7 @@ import ProductExperience from './components/product-experience'
 import ReturnsExperience from './components/returns-experience'
 import ShippingExperience from './components/shipping-experience'
 import StaticFormShopMosaic from './components/staticform-shopmosaic'
+import SiteLayout from './components/site/SiteLayout'
 import FramerEffects, { ABOUT_REVEALS, LOOKBOOK_REVEALS, PRIVACY_REVEALS, PRODUCT_REVEALS, RETURNS_REVEALS, SHIPPING_REVEALS } from './utils/FramerEffects.tsx'
 import LayoutIsland from './utils/LayoutIsland.tsx'
 import ResponsiveWrapper from './utils/ResponsiveWrapper.tsx'
@@ -23,23 +24,20 @@ const RESPONSIVE_VARIANTS = {
   xl: 'Desktop XL',
 }
 
-function HomePage() {
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  // Point the navbar's SHOP, LOOKBOOK, ARCHIVE and ABOUT items at their routes
+// Framer's "View the collection" buttons have no href, so point them at the shop.
+// The Framer navbar is hidden by the site navbar, so only CTAs are patched here.
+function useShopCtas(ref: React.RefObject<HTMLDivElement | null>) {
   useEffect(() => {
-    if (!containerRef.current) return
-    const stops = [
-      linkNavItem(containerRef.current, 'SHOP', '/shop'),
-      linkNavItem(containerRef.current, 'LOOKBOOK', '/lookbook'),
-      linkNavItem(containerRef.current, 'ARCHIVE', '/archive'),
-      linkNavItem(containerRef.current, 'ABOUT', '/about'),
-    ]
-    return () => stops.forEach((stop) => stop())
-  }, [])
+    if (!ref.current) return
+    return linkNavItem(ref.current, 'VIEW THE COLLECTION', '/shop')
+  }, [ref])
+}
 
+function HomePage() {
+  const ref = useRef<HTMLDivElement>(null)
+  useShopCtas(ref)
   return (
-    <div ref={containerRef}>
+    <div ref={ref}>
       <LayoutIsland>
         <ResponsiveWrapper Component={HomeExperience} variants={RESPONSIVE_VARIANTS} />
       </LayoutIsland>
@@ -48,13 +46,15 @@ function HomePage() {
 }
 
 function LookbookPage() {
+  const ref = useRef<HTMLDivElement>(null)
+  useShopCtas(ref)
   return (
-    <>
+    <div ref={ref}>
       <LayoutIsland>
         <ResponsiveWrapper Component={LookbookExperience} variants={RESPONSIVE_VARIANTS} />
       </LayoutIsland>
       <FramerEffects reveals={LOOKBOOK_REVEALS} />
-    </>
+    </div>
   )
 }
 
@@ -130,20 +130,20 @@ function ProductPage() {
 }
 
 function NotFoundPage() {
-  const containerRef = useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLDivElement>(null)
 
   // The 404's links resolve as relative "./", so point them at absolute routes
   useEffect(() => {
-    if (!containerRef.current) return
+    if (!ref.current) return
     const stops = [
-      linkNavItem(containerRef.current, 'BACK TO THE RUNWAY', '/'),
-      linkNavItem(containerRef.current, 'SHOP', '/shop'),
+      linkNavItem(ref.current, 'BACK TO THE RUNWAY', '/'),
+      linkNavItem(ref.current, 'SHOP', '/shop'),
     ]
     return () => stops.forEach((stop) => stop())
   }, [])
 
   return (
-    <div ref={containerRef}>
+    <div ref={ref}>
       <LayoutIsland>
         <ResponsiveWrapper Component={NotFoundExperience} variants={RESPONSIVE_VARIANTS} />
       </LayoutIsland>
@@ -154,38 +154,39 @@ function NotFoundPage() {
 function App() {
   // Simple path switch: home at /, known routes below, anything else is a 404
   const path = window.location.pathname
+
+  let page
+  let pageClass = ''
   if (path.startsWith('/shop')) {
-    return <StaticFormShopMosaic />
-  }
-  if (path.startsWith('/lookbook')) {
-    return <LookbookPage />
-  }
-  if (path.startsWith('/archive')) {
-    return <ArchivePage />
-  }
-  if (path.startsWith('/about')) {
-    return <AboutPage />
-  }
-  if (path.startsWith('/contact')) {
-    return <ContactPage />
-  }
-  if (path.startsWith('/shipping')) {
-    return <ShippingPage />
-  }
-  if (path.startsWith('/returns')) {
-    return <ReturnsPage />
-  }
-  if (path.startsWith('/privacy')) {
-    return <PrivacyPage />
-  }
-  if (path.startsWith('/product/')) {
-    return <ProductPage />
-  }
-  if (path === '/' || path === '/index.html') {
-    return <HomePage />
+    page = <StaticFormShopMosaic />
+  } else if (path.startsWith('/lookbook')) {
+    page = <LookbookPage />
+  } else if (path.startsWith('/archive')) {
+    page = <ArchivePage />
+  } else if (path.startsWith('/about')) {
+    page = <AboutPage />
+  } else if (path.startsWith('/contact')) {
+    page = <ContactPage />
+  } else if (path.startsWith('/shipping')) {
+    page = <ShippingPage />
+  } else if (path.startsWith('/returns')) {
+    page = <ReturnsPage />
+  } else if (path.startsWith('/privacy')) {
+    page = <PrivacyPage />
+  } else if (path.startsWith('/product/')) {
+    page = <ProductPage />
+  } else if (path === '/' || path === '/index.html') {
+    page = <HomePage />
+    pageClass = 'site-home'
+  } else {
+    page = <NotFoundPage />
   }
 
-  return <NotFoundPage />
+  return (
+    <SiteLayout className={pageClass} backToShop={path.startsWith('/product/')}>
+      {page}
+    </SiteLayout>
+  )
 }
 
 export default App
