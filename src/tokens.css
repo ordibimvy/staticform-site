@@ -1,0 +1,504 @@
+/**
+ * Project design tokens extracted from the Framer canvas.
+ * Import this file once at the root of your app so the
+ * --token-<uuid> CSS variables referenced by exported components resolve.
+ */
+/* Fallback @imports for families not covered by @font-face below. */
+/* These rely on Google Fonts publishing the family under the exact name; */
+/* will silently 404 for custom or non-Google fonts. */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist%20Mono:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument%20Serif:wght@300;400;500;600;700;800&display=swap');
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/geist/v5/gyBhhwUxId8gMGYQMKR3pzfaWI_RnOM4mJPby1QNtA.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/geist/v5/gyBhhwUxId8gMGYQMKR3pzfaWI_Re-Q4mJPby1QNtA.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Geist';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/geist/v5/gyBjhwUxId8gMEwZAluvzlxA9ojEVKA32Zna6VEdtKCL.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Geist';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/geist/v5/gyBjhwUxId8gMEwZAluvzlxA9ojEVKDQ3pna6VEdtKCL.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/instrumentserif/v5/jizHRFtNs2ka5fXjeivQ4LroWlx-6zATjnTNgNq55w.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/geist/v5/gyBhhwUxId8gMGYQMKR3pzfaWI_RruM4mJPby1QNtA.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Geist';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/geist/v5/gyBjhwUxId8gMEwZAluvzlxA9ojEVKDi3pna6VEdtKCL.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-2zcZj1bIkNo.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/geistmono/v6/or3yQ6H-1_WfwkMZI_qYPLs1a-t7PU0AbeE9KJ5W7ihaO_CS.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/geistmono/v6/or3yQ6H-1_WfwkMZI_qYPLs1a-t7PU0AbeHaL55W7ihaO_CS.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/geistmono/v6/or3wQ6H-1_WfwkMZI_qYFrIHlDMSVteuavT1a5EX5Cl4PuCSdNg.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/geistmono/v6/or3wQ6H-1_WfwkMZI_qYFrIHlDMSVteuavT1a3YQ5Cl4PuCSdNg.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/geist/v5/gyBhhwUxId8gMGYQMKR3pzfaWI_RQuQ4mJPby1QNtA.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/geist/v5/gyBhhwUxId8gMGYQMKR3pzfaWI_RNeQ4mJPby1QNtA.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Geist';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/geist/v5/gyBjhwUxId8gMEwZAluvzlxA9ojEVKB52Zna6VEdtKCL.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Geist';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/geist/v5/gyBjhwUxId8gMEwZAluvzlxA9ojEVKAO2Zna6VEdtKCL.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://framerusercontent.com/assets/5vvr9Vy74if2I6bQbJvbw7SY1pQ.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://framerusercontent.com/assets/EOr0mi4hNtlgWNn9if640EZzXCo.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://framerusercontent.com/assets/Y9k9QrlZAqio88Klkmbd8VoMQc.woff2') format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://framerusercontent.com/assets/OYrD2tBIBPvoJXiIHnLoOXnY9M.woff2') format('woff2');
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://framerusercontent.com/assets/JeYwfuaPfZHQhEG8U5gtPDZ7WQ.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://framerusercontent.com/assets/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://framerusercontent.com/assets/b6Y37FthZeALduNqHicBT6FutY.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+:root {
+  --token-a3482f54-0c70-45ca-ae50-d600c5840b70: rgb(17, 17, 15);
+  --token-31bf6c1c-c2e5-4905-a3a6-36d3d25ecb81: rgb(237, 234, 226);
+  --token-6491f914-f7eb-4d7a-bab8-d9eec2f1e837: rgb(26, 25, 22);
+  --token-266155f1-ee22-4c4d-a7f9-14396f3b3170: rgb(133, 129, 120);
+  --token-10b3c583-e6c2-4ed5-bd70-462ebcec53e7: rgb(185, 63, 50);
+  --token-d428742b-4060-4ea2-80f7-8fa00d8f3eb3: rgba(237, 234, 226, 0.16);
+  --token-a7e28750-cc9d-4290-b719-389c667e3f15: rgba(237, 234, 226, 0.34);
+  --token-cfccb85f-83a5-4458-ac22-43b33dee2601: rgba(237, 234, 226, 0.6);
+  --token-cec2517d-cab2-4e1e-94a1-a5acdca3cea8: rgba(17, 17, 15, 0.8);
+  --token-f8ab56a3-8c96-42df-8745-1304d733152f: rgba(17, 17, 15, 0.6);
+  --token-963a00a7-fb82-4991-8dda-c77d39a6c430: rgba(17, 17, 15, 0.55);
+  --token-9b936d43-daa2-400f-b8d1-979a0f7daaea: rgb(101, 99, 95);
+  --token-3e2e5343-00c5-4418-aae9-932f4ac04d2d: rgb(65, 65, 61);
+  --token-3b8aea81-f395-4ea7-9985-5ee1cf62f7a1: rgb(197, 194, 186);
+  --token-c33760fb-2f40-4bd2-823b-7f670b8a6659: rgb(89, 86, 80);
+  --token-15ac7a4e-7407-4786-a29f-1b6e7c5ca92d: rgb(214, 211, 203);
+  --token-73ba03f8-9837-4bb4-b65f-4709bdde1a2d: rgb(131, 130, 125);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --token-a3482f54-0c70-45ca-ae50-d600c5840b70: rgb(17, 17, 15);
+    --token-31bf6c1c-c2e5-4905-a3a6-36d3d25ecb81: rgb(237, 234, 226);
+    --token-6491f914-f7eb-4d7a-bab8-d9eec2f1e837: rgb(26, 25, 22);
+    --token-266155f1-ee22-4c4d-a7f9-14396f3b3170: rgb(133, 129, 120);
+    --token-10b3c583-e6c2-4ed5-bd70-462ebcec53e7: rgb(185, 63, 50);
+    --token-d428742b-4060-4ea2-80f7-8fa00d8f3eb3: rgba(237, 234, 226, 0.16);
+    --token-a7e28750-cc9d-4290-b719-389c667e3f15: rgba(237, 234, 226, 0.34);
+    --token-cfccb85f-83a5-4458-ac22-43b33dee2601: rgba(237, 234, 226, 0.6);
+    --token-cec2517d-cab2-4e1e-94a1-a5acdca3cea8: rgba(17, 17, 15, 0.8);
+    --token-f8ab56a3-8c96-42df-8745-1304d733152f: rgba(17, 17, 15, 0.6);
+    --token-963a00a7-fb82-4991-8dda-c77d39a6c430: rgba(17, 17, 15, 0.55);
+    --token-9b936d43-daa2-400f-b8d1-979a0f7daaea: rgb(101, 99, 95);
+    --token-3e2e5343-00c5-4418-aae9-932f4ac04d2d: rgb(65, 65, 61);
+    --token-3b8aea81-f395-4ea7-9985-5ee1cf62f7a1: rgb(197, 194, 186);
+    --token-c33760fb-2f40-4bd2-823b-7f670b8a6659: rgb(89, 86, 80);
+    --token-15ac7a4e-7407-4786-a29f-1b6e7c5ca92d: rgb(214, 211, 203);
+    --token-73ba03f8-9837-4bb4-b65f-4709bdde1a2d: rgb(131, 130, 125);
+  }
+}
+
+.text-style-ijUnoh22D {
+  font-family: 'Geist', sans-serif;
+  font-size: 15px;
+  line-height: 1.5em;
+  color: rgb(237, 234, 226);
+}
+.text-style-xsFHtZz0b {
+  font-family: 'Geist Mono', sans-serif;
+  font-size: 11px;
+  line-height: 1.4em;
+  color: rgb(237, 234, 226);
+}
+.text-style-J07KW0OMG {
+  font-family: 'Geist Mono', sans-serif;
+  font-size: 12px;
+  line-height: 1.4em;
+  color: rgb(237, 234, 226);
+}
+.text-style-GGThu5wvw {
+  font-family: 'Geist', sans-serif;
+  font-size: 15px;
+  line-height: 1.5em;
+  color: rgb(237, 234, 226);
+}
+.text-style-o_TPZzoJe {
+  font-family: 'Geist', sans-serif;
+  font-size: 256px;
+  line-height: 0.8em;
+  color: rgb(237, 234, 226);
+}
+.text-style-NV25Wl7AI {
+  font-family: 'Instrument Serif', sans-serif;
+  font-size: 30px;
+  line-height: 1.12em;
+  color: rgb(237, 234, 226);
+}
+.text-style-mJjf53kal {
+  font-family: 'Geist', sans-serif;
+  font-size: 96px;
+  line-height: 0.92em;
+  color: rgb(237, 234, 226);
+}
+.text-style-qulxcVUwb {
+  font-family: 'Geist', sans-serif;
+  font-size: 17px;
+  line-height: 1.5em;
+  color: rgb(237, 234, 226);
+}
+.text-style-LV36a6Qsf {
+  font-family: 'Geist', sans-serif;
+  font-size: 73.6px;
+  line-height: 0.94em;
+  color: rgb(237, 234, 226);
+}
+.text-style-Ox07MnIuG {
+  font-family: 'Geist', sans-serif;
+  font-size: 24px;
+  line-height: 1.5em;
+  color: rgb(237, 234, 226);
+}
+.text-style-sfcabV6Bn {
+  font-family: 'Geist', sans-serif;
+  font-size: 160px;
+  line-height: 0.88em;
+  color: rgb(237, 234, 226);
+}
+.text-style-GhXgSu4uZ {
+  font-family: 'Geist', sans-serif;
+  font-size: 192px;
+  line-height: 0.86em;
+  color: rgb(237, 234, 226);
+}
+.text-style-u2rWHhY6q {
+  font-family: 'Instrument Serif', sans-serif;
+  font-size: 384px;
+  line-height: 0.74em;
+  color: rgb(26, 25, 22);
+}
+.text-style-dCr6_1y85 {
+  font-family: 'Instrument Serif', sans-serif;
+  font-size: 38px;
+  line-height: 1.05em;
+  color: rgb(237, 234, 226);
+}
+.text-style-tvZshztIy {
+  font-family: 'Geist', sans-serif;
+  font-size: 144px;
+  line-height: 0.9em;
+  color: rgb(237, 234, 226);
+}
+.text-style-d4jcS6LoD {
+  font-family: 'Geist', sans-serif;
+  font-size: 240px;
+  line-height: 0.88em;
+  color: rgb(237, 234, 226);
+}
+.text-style-iSDGzosIK {
+  font-family: 'Geist', sans-serif;
+  font-size: 182.4px;
+  line-height: 0.9em;
+  color: rgb(17, 17, 15);
+}
+.text-style-AOyN67EhD {
+  font-family: 'Geist', sans-serif;
+  font-size: 21px;
+  line-height: 1.45em;
+  color: rgb(17, 17, 15);
+}
+.text-style-J4VW6uZkf {
+  font-family: 'Geist', sans-serif;
+  font-size: 36px;
+  line-height: 1.5em;
+  color: rgb(237, 234, 226);
+}
+.text-style-opHaWgkoT {
+  font-family: 'Instrument Serif', sans-serif;
+  font-size: 30px;
+  line-height: 1.05em;
+  color: rgb(237, 234, 226);
+}
+.text-style-TFj373OJW {
+  font-family: 'Instrument Serif', sans-serif;
+  font-size: 70px;
+  line-height: 1.02em;
+  color: rgb(237, 234, 226);
+}
+.text-style-eNw4hBNXf {
+  font-family: 'Geist', sans-serif;
+  font-size: 128px;
+  line-height: 0.9em;
+  color: rgb(237, 234, 226);
+}
+.text-style-mcAA8i85i {
+  font-family: 'Instrument Serif', sans-serif;
+  font-size: 60px;
+  line-height: 1.05em;
+  color: rgb(237, 234, 226);
+}
+.text-style-vnBK773i0 {
+  font-family: 'Geist', sans-serif;
+  font-size: 176px;
+  line-height: 0.88em;
+  color: rgb(237, 234, 226);
+}
+.text-style-tdH9XgbFj {
+  font-family: 'Instrument Serif', sans-serif;
+  font-size: 34px;
+  line-height: 1.15em;
+  color: rgb(237, 234, 226);
+}
+.text-style-KhdMfAAD9 {
+  font-family: 'Geist', sans-serif;
+  font-size: 192px;
+  line-height: 0.88em;
+  color: rgb(237, 234, 226);
+}
+.text-style-XhiG8yeyc {
+  font-family: 'Instrument Serif', sans-serif;
+  font-size: 38px;
+  line-height: 1.1em;
+  color: rgb(237, 234, 226);
+}
+.text-style-zGN0hDdCB {
+  font-family: 'Geist', sans-serif;
+  font-size: 310.4px;
+  line-height: 0.78em;
+  color: rgb(26, 25, 22);
+}
+.text-style-EyXgoJaek {
+  font-family: 'Instrument Serif', sans-serif;
+  font-size: 64px;
+  line-height: 1.1em;
+  color: rgb(237, 234, 226);
+}
+.text-style-iv0OKxgut {
+  font-family: 'Geist Mono', sans-serif;
+  font-size: 11px;
+  line-height: 1.4em;
+  color: rgb(133, 129, 120);
+}
+.text-style-o3P24DS0k {
+  font-family: 'Geist Mono', sans-serif;
+  font-size: 12px;
+  line-height: 1.4em;
+  color: rgb(133, 129, 120);
+}
+.text-style-FvlVYfbqp {
+  font-family: 'Geist', sans-serif;
+  font-size: 15px;
+  line-height: 1.5em;
+  color: rgba(237, 234, 226, 0.6);
+}
+.text-style-aMBh_T9Nm {
+  font-family: 'Geist Mono', sans-serif;
+  font-size: 11px;
+  line-height: 1.4em;
+  color: rgb(17, 17, 15);
+}
+.text-style-MVGDy2Phf {
+  font-family: 'Geist', sans-serif;
+  font-size: 96px;
+  line-height: 0.92em;
+  color: rgb(17, 17, 15);
+}
+.text-style-iWrMh6bc1 {
+  font-family: 'Geist', sans-serif;
+  font-size: 15px;
+  line-height: 1.5em;
+  color: rgb(101, 99, 95);
+}
+.text-style-n4_JeReOD {
+  font-family: 'Geist Mono', sans-serif;
+  font-size: 12px;
+  line-height: 1.4em;
+  color: rgb(17, 17, 15);
+}
+.text-style-XXESnZLHW {
+  font-family: 'Instrument Serif', sans-serif;
+  font-size: 160px;
+  line-height: 0.88em;
+  color: rgb(237, 234, 226);
+}
+.text-style-dLMJaaBm7 {
+  font-family: 'Instrument Serif', sans-serif;
+  font-size: 144px;
+  line-height: 0.9em;
+  color: rgb(237, 234, 226);
+}
+.text-style-SjjkWg8PF {
+  font-family: 'Instrument Serif', sans-serif;
+  font-size: 128px;
+  line-height: 0.9em;
+  color: rgb(237, 234, 226);
+}
+.text-style-qegJqmLzc {
+  font-family: 'Instrument Serif', sans-serif;
+  font-size: 192px;
+  line-height: 0.88em;
+  color: rgb(237, 234, 226);
+}
+.text-style-amCUDgt1N {
+  font-family: 'Instrument Serif', sans-serif;
+  font-size: 192px;
+  line-height: 0.86em;
+  color: rgb(237, 234, 226);
+}
+.text-style-qSPGeHhYW {
+  font-family: 'Instrument Serif', sans-serif;
+  font-size: 182.4px;
+  line-height: 0.9em;
+  color: rgb(17, 17, 15);
+}
+.text-style-EoIg8Ey_b {
+  font-family: 'Instrument Serif', sans-serif;
+  font-size: 96px;
+  line-height: 0.92em;
+  color: rgb(237, 234, 226);
+}
+.text-style-D_dcunEmw {
+  font-family: 'Instrument Serif', sans-serif;
+  font-size: 28px;
+  line-height: 1em;
+  color: rgb(237, 234, 226);
+}
+.text-style-Nlt6RdS7c {
+  font-family: 'Instrument Serif', sans-serif;
+  font-size: 38px;
+  line-height: 1.1em;
+  color: rgb(237, 234, 226);
+}
+.text-style-WwOkvoxC7 {
+  font-family: 'Geist', sans-serif;
+  font-size: 40px;
+  line-height: 1.05em;
+  color: rgb(237, 234, 226);
+}
+.text-style-Ak_ALM4dY {
+  font-family: 'Geist', sans-serif;
+  font-size: 20px;
+  line-height: 1.3em;
+  color: rgb(237, 234, 226);
+}

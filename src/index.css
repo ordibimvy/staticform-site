@@ -1,0 +1,5 @@
+body {
+  margin: 0;
+  /* Site ink colour; keeps canvas-default white from showing between sections */
+  background: rgb(17, 17, 15);
+}
