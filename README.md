@@ -8,7 +8,8 @@ COUTURE • BESPOKE TAILORING
 
 - React + Vite + TypeScript single-page site.
 - Pages are switched by URL path in `src/App.tsx`: home, shop, lookbook, archive, about, contact, pickup & delivery (`/shipping`), returns, privacy, product pages (`/product/...`) and a 404 page.
-- Shared navbar, bag drawer, mobile menu and footer live in `src/components/site/`. Site links live in `src/config/navigation.ts`.
+- Shared navbar, footer and layout live in `src/components/site/`: `SiteNav.tsx` (top bar, and the mobile menu inside it), `SiteBag.tsx` (bag drawer), `SiteFooter.tsx`, `SiteLayout.tsx` and `site.css`. Site links live in `src/config/navigation.ts`.
+- `src/utils/linkNavItem.ts` still patches a few Framer buttons that have no href ("View the collection" buttons and the 404 links). The navbar does not use it.
 - Pages are built from exported Framer components in `src/components/*-experience/` and `src/components/staticform-shopmosaic/`. Do not edit the `_framer-runtime.js` files.
 - Colours and fonts are in `src/tokens.css` and `src/components/site/site.css`.
 
