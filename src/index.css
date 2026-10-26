@@ -1,3 +1,12 @@
+/* Framer's canvas assumes border-box sizing, but the exported components do not set it.
+   Without this, fixed-width frames with padding grow past the viewport (72-92px sideways scroll
+   at desktop widths). Keep this rule first so everything below inherits it. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   /* Site ink colour; keeps canvas-default white from showing between sections */

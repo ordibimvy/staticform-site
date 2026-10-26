@@ -339,6 +339,15 @@ button:focus-visible {
   background: var(--site-gold);
 }
 
+/* ---------- Framer overrides ---------- */
+/* Archive list rows: the title column is 1fr, but its large Framer font has a minimum width wider
+   than the space at Tablet width (810-1199px), which pushes the row 16px past the viewport.
+   Letting the column shrink, and wrapping long words, keeps the row inside the page. */
+.site-main .row > .label {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 /* ---------- Main + back link ---------- */
 .site-main {
   min-height: 60vh;

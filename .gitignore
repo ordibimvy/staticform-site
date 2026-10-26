@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Visual review captures from scripts/capture.mjs
+scripts/screenshots/
