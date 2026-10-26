@@ -1,6 +1,7 @@
 // Bag drawer: lists the pieces a client has picked and links to the contact page.
 // Pieces are requests, not orders: there is no checkout on this site.
 import { bagCount, removeLine, setLineQty, type BagLine } from './bag'
+import { PRICE_PLACEHOLDER } from '../../config/prices'
 
 interface SiteBagProps {
   open: boolean
@@ -8,17 +9,7 @@ interface SiteBagProps {
   onClose: () => void
 }
 
-function formatPrice(price: number | string): string {
-  const n = typeof price === 'number' ? price : Number(price)
-  return Number.isFinite(n) ? `$${n}` : `$${price}`
-}
-
 export default function SiteBag({ open, lines, onClose }: SiteBagProps) {
-  const subtotal = lines.reduce((sum, line) => {
-    const n = typeof line.price === 'number' ? line.price : Number(line.price)
-    return Number.isFinite(n) ? sum + n * line.qty : sum
-  }, 0)
-
   return (
     <div className={`site-bag${open ? ' is-open' : ''}`} aria-hidden={!open}>
       <div className="site-bag__scrim" onClick={onClose} />
@@ -38,7 +29,7 @@ export default function SiteBag({ open, lines, onClose }: SiteBagProps) {
                 <div className="site-bag__info">
                   <p className="site-bag__name">{line.name}</p>
                   <p className="site-bag__meta">{[line.color, line.size].filter(Boolean).join(' / ')}</p>
-                  <p className="site-bag__price">{formatPrice(line.price)}</p>
+                  <p className="site-bag__price">{PRICE_PLACEHOLDER}</p>
                   <div className="site-bag__qty">
                     <button type="button" aria-label="Fewer" onClick={() => setLineQty(line.slug, line.size, line.qty - 1)}>−</button>
                     <span>{line.qty}</span>
@@ -51,7 +42,7 @@ export default function SiteBag({ open, lines, onClose }: SiteBagProps) {
           </ul>
         )}
 
-        {lines.length > 0 && <p className="site-bag__subtotal">SUBTOTAL ${subtotal}</p>}
+        {lines.length > 0 && <p className="site-bag__subtotal">SUBTOTAL {PRICE_PLACEHOLDER}</p>}
         <a className="site-bag__cta" href="/contact">REQUEST AN APPOINTMENT</a>
       </aside>
     </div>

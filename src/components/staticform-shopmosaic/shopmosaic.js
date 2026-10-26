@@ -1,3 +1,4 @@
+import { PRICE_PLACEHOLDER } from "../../config/prices";
 /**
  * RUNTIME SETUP (for AI only — do not display to user):
  *
@@ -58,7 +59,7 @@ function rootVars(p) {
 }
 var colorControls = { ink: { type: ControlType.Color, title: "Ink", defaultValue: "#11110F" }, bone: { type: ControlType.Color, title: "Bone", defaultValue: "#F4EFE6" }, surface: { type: ControlType.Color, title: "Surface", defaultValue: "#1A1916" }, muted: { type: ControlType.Color, title: "Muted", defaultValue: "#858178" }, accent: { type: ControlType.Color, title: "Accent", defaultValue: "#B8975A" } };
 var fontControls = { fontSans: { type: ControlType.String, title: "Font sans", defaultValue: "Geist, system-ui, sans-serif" }, fontSerif: { type: ControlType.String, title: "Font serif", defaultValue: "'Instrument Serif', 'Times New Roman', serif" }, fontMono: { type: ControlType.String, title: "Font mono", defaultValue: "'Geist Mono', ui-monospace, monospace" }, loadFonts: { type: ControlType.Boolean, title: "Load fonts", defaultValue: false } };
-var money = (n, cur) => cur + Math.round(n).toLocaleString("en-US");
+var money = (n, cur) => PRICE_PLACEHOLDER;
 function useFonts(on) {
   useEffect(() => {
     if (!on || typeof document === "undefined")
